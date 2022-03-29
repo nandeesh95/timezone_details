@@ -28,10 +28,10 @@ class UserDetailsService{
    */
   public function getTime(){
     $timezone = $this->userTimezoneConfig->get('timezone');
-    $time = $this->time->getCurrentTime();
-    $datetime = new DrupalDateTime(NULL, $timezone);
-    return $datetime;
+    $date = new DrupalDateTime();
+    $date->setTimezone(new \DateTimeZone($timezone)); 
+    $date_time = $date->format('dS M Y g:i A');
+    return $date_time;
 
   }
-
 }
