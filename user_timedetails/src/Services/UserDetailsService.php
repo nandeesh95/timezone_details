@@ -29,7 +29,7 @@ class UserDetailsService{
   public function getTime(){
     $timezone = $this->userTimezoneConfig->get('timezone');
     $time = $this->time->getCurrentTime();
-    $datetime = new DrupalDateTime($time, $timezone);
+    $datetime = new DrupalDateTime(NULL, $timezone);
     return $datetime;
 
   }
