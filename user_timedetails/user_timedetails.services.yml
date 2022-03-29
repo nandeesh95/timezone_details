@@ -1,0 +1,4 @@
+services:
+  user_timedetails.time_zone:
+    class: Drupal\user_timedetails\Services\UserDetailsService
+    arguments: ['@config.factory','@datetime.time']

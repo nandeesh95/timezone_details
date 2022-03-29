@@ -1,0 +1,5 @@
+name: 'user_timedetails'
+type: module
+description: 'show user timezone'
+core_version_requirement: ^8 || ^9
+package: 'Custom'
